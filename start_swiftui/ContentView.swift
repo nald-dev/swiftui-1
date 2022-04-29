@@ -1,16 +1,33 @@
 //
 //  ContentView.swift
-//  start_swiftui
-//
-//  Created by Digital on 30/04/22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color.gray
+        
+            VStack(
+                alignment: .leading,
+                spacing: 10
+            ) {
+                Text("Title")
+                .font(
+                    .system(size: 32)
+                    .weight(.heavy)
+                )
+                
+                Text("Content")
+            }
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .topLeading
+            )
+            .padding(20)
+        }
     }
 }
 
